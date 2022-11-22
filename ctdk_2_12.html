@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi suất ngân hàng Timo</title>
+</head>
+<body>
+</body>
+<script>
+    let stg = +prompt("Số tiền bạn muốn gửi: ");
+    let kyHan = +prompt("Nhập kỳ hạn của bạn (tháng): ");
+    let laiSuat = 0;
+    if (kyHan <= 0){
+        alert("Kỳ hạn bạn nhập chưa chính xác!");
+    } else if (kyHan < 6 ) {
+        laiSuat = 0.06;
+        let tienLai = stg * laiSuat / 12 * kyHan;
+        alert("Tiền lãi của bạn là: " +tienLai);
+    } else if (kyHan < 12) {
+        laiSuat = 0.08;
+        let tienLai = stg * laiSuat / 12 * kyHan;
+        alert("Tiền lãi của bạn là: " +tienLai);
+    } else if (kyHan < 18) {
+        laiSuat = 0.0860;
+        let tienLai = stg * laiSuat / 12 * kyHan;
+        let laiKep = stg * Math.pow((1 + laiSuat), kyHan);
+        alert("Tiền lãi của bạn là: " +tienLai);
+        alert("Vì bạn gửi tiết kiệm trên 12 tháng nên lãi kép của bạn là: " +laiKep);
+    } else {
+        laiSuat = 0.0890;
+        let tienLai = stg * laiSuat / 12 * kyHan;
+        let laiKep = stg * Math.pow((1 + laiSuat), kyHan);
+        alert("Tiền lãi của bạn là: " +tienLai);
+        alert("Vì bạn gửi tiết kiệm trên 12 tháng nên lãi kép của bạn là: " +laiKep);
+    }
+</script>
+</html>

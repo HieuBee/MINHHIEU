@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2 - 10</title>
+</head>
+<body>
+<p>Enter your number of meter this month: </p>
+<input type="number" id="number">
+<br/>
+<button type="button" onclick="showPrice()">Let's check!</button>
+<br/>
+<br/>
+<span>Your electric cost this month is: </span>
+<span id="price"></span>
+<span> VND </span>
+</body>
+<script>
+    function showPrice() {
+        let w = +document.getElementById('number').value;
+        if (w > 0 && w <= 50){
+            document.getElementById('price').innerHTML = w * 1678;
+        } else if (w <= 100){
+            document.getElementById('price').innerHTML = w * 1734;
+        } else if (w <= 200){
+            document.getElementById('price').innerHTML = w * 2014;
+        } else if (w <= 300){
+            document.getElementById('price').innerHTML = w * 2536;
+        } else if (w <= 400) {
+            document.getElementById('price').innerHTML = w * 2834;
+        } else {
+            document.getElementById('price').innerHTML = w * 2927;
+        }
+    }
+</script>
+</html>

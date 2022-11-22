@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2 - 11</title>
+</head>
+<body>
+<p>Enter your income this month (milion): </p>
+<input type="number" id="income">
+<br/>
+<button type="button" onclick="showIncome()">Let's check!</button>
+<br/>
+<br/>
+<span>Your income tax this month is: </span>
+<span id="tax"></span>
+<span> VND </span>
+</body>
+<script>
+    function showIncome() {
+        let income = +document.getElementById('income').value;
+        if (income <= 5){
+            document.getElementById('tax').innerHTML = income * 1000000 * 5 / 100;
+        } else if (income <= 10){
+            document.getElementById('tax').innerHTML = income * 1000000 * 10 / 100;
+        } else if (income <= 18){
+            document.getElementById('tax').innerHTML = income * 1000000 * 15 / 100;
+        } else if (income <= 32){
+            document.getElementById('tax').innerHTML = income * 1000000 * 20 / 100;
+        } else if (income <= 52){
+            document.getElementById('tax').innerHTML = income * 1000000 * 25 / 100;
+        } else if (income <= 80){
+            document.getElementById('tax').innerHTML = income * 1000000 * 30 / 100;
+        } else {
+            document.getElementById('tax').innerHTML = income * 1000000 * 35 / 100;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1.</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt("Nhập a (ax + b = 0) :");
+    let b = +prompt("Nhập b (ax + b = 0) :");
+    let x;
+    if (a == 0 && b == 0) {
+        alert("Phương trình vô số nghiệm");
+    } else if (b < 0 || b > 0 && a == 0) {
+        alert("Phương trình vô nghiệm");
+    } else if (a < 0 || a > 0){
+        x = (-b) / a;
+        alert("Phương trình có nghiệm duy nhất: " +a);
+    }
+</script>
+</html>
