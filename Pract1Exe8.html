@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" onclick="playGame()" value="PLay">
+</body>
+<script>
+    function playGame() {
+        let a = 1;
+        let importFirst = +prompt("Nhập khoản số đầu bạn muốn (từ ?): ");
+        let importSecond = +prompt("Nhập khoản số cuối bạn muốn (đến ?): ");
+        let x = Math.floor((Math.random() * importSecond) + importFirst);
+        while (a <= 3) {
+            let importNumber = +prompt("Nhập số bạn muốn đoán: ");
+            if (importNumber !== x) {
+                if (importNumber < x) {
+                    alert("Rất tiếc số bạn nhập chưa đúng và bé thua!");
+                    a++;
+                } else {
+                    alert("Rất tiếc số bạn nhập chưa đúng và lớn hơn!");
+                    a++
+                }
+            } else {
+                alert("Chúc mừng bạn đã đoán đúng!");
+                break;
+            }
+        }
+    }
+</script>
+</html>
