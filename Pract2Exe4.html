@@ -8,11 +8,20 @@
 
 </body>
 <script>
-    for (let i = 1; i <= 7 ; i++) {
-        for (let j = 0; j < 21; j++) {
+for (let j = 1; j <= 7 ; j++) {
+        if (j == 1 || j == 7) {
+            for (let k = 1; k <= 21 ; k++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        } else {
             document.write("*");
+            for (let k = 1; k <= 19 ; k++) {
+                document.write("&ensp;");
+            }
+            document.write("*");
+            document.write("<br>");
         }
-        document.write("<br>")
     }
 </script>
 </html>
