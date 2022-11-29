@@ -10,12 +10,15 @@
     let n = 30;
     let c = 0;
     let k = 7;
-    while (c < 30){
-        for (let i = 7; i < n; i++) {
-            if (k % 7 === 0){
-
+    let sum = 0;
+    while (c < n){
+        if (k % 7 === 0){
+                c++;
+                document.write(k + "<br>");
             }
-        }
+        sum += k;
+        k++;
     }
+    document.write("Sum of the first 30 numbers divided by 7 is : " + sum);
 </script>
 </html>
