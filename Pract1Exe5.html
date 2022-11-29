@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 1 - 5</title>
+</head>
+<body>
+</body>
+<script>
+    let f0 = 0, f1 = 1, fn = 1, count = 18;
+    let total = 1;
+    document.write(f0 + "<br>");
+    document.write(f1 + "<br>");
+    for (let i = 0; i < count ; i++) {
+        fn = f1 + f0;
+        f0 = f1;
+        f1 = fn;
+        total += fn;
+        document.write(fn + "<br>");
+    }
+    document.write("The total of the first 20 number in Fibonacci is: " + total);
+</script>
+</html>
