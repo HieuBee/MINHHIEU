@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+</body>
+<script>
+  function getSwap(arr) {
+    arr.reverse();
+  }
+  let arrSwap = [];
+  for (let i = 0; i < 5; i++) {
+    arrSwap[i] = +prompt("Input item for arr: ");
+  }
+  getSwap(arrSwap);
+  document.write(arrSwap.join(" - "));
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+      Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.</title>
+</head>
+<body>
+</body>
+<script>
+  function isCheck(arr, numberCheck) {
+    let index = numberCheck.indexOf(arr);
+    if (index < 0) {
+      document.write("-1");
+    } else {
+      // document.getElementById('outPutS').innerText = arrVietNam[index];
+      document.write("+1");
+    }
+  }
+  let arrCheck = [];
+  for (let i = 0; i < 5; i++) {
+    arrCheck[i] = +prompt("Input item for arr: ");
+  }
+  let numberCheck = +prompt("Input number: ");
+  isCheck(arrCheck, numberCheck);
+</script>
+</html>
