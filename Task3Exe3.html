@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - 3</title>
+</head>
+<body>
+</body>
+<script>
+  let numerators = [12, 11, 12];
+  let denominators = [17, 17, 31];
+  let fraction = [];
+  for (let i = 0; i < numerators.length; i++) {
+      fraction[i] = numerators[i] / denominators[i];
+  }
+  let max =  fraction[0];
+  let maxi = 0;
+  for (let i = 0; i < fraction.length; i++) {
+      if (max < fraction[i]){
+          max = fraction[i];
+          maxi = i;
+      }
+  }
+  document.write("Index of the largest fraction is: " + maxi);
+</script>
+</html>

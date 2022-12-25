@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let input1 = prompt("Nhập xâu ký tự 1: ");
+  let dem = 0;
+  for (let i = 0; i < input1.length; i++) {
+    if (input1[i] !== input1[i + 1]) {
+      dem++;
+    }
+  }
+  document.write(dem);
+</script>
+</html>

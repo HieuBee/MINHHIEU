@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 Exe 1</title>
+</head>
+<body>
+<input type="text" id="inputString">
+<button type="button" onclick="displayString()">Click</button> <br>
+<span id="outputNewString"></span>
+</body>
+<script>
+  function displayString() {
+      let inputString = document.getElementById("inputString").value;
+      let arrConsonant = ["b", "c", "d", "g", "h", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x"];
+      // let arrConsonantA = ["B", "C", "D", "G", "H", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X"];
+      let indexO = arrConsonant.indexOf(inputString);
+      for (let i = 0; i < inputString.length; i++) {
+          if (indexO !== -1) {
+              document.getElementById("outputNewString").innerHTML = inputString.toUpperCase();
+          } else {
+              document.getElementById("outputNewString").innerHTML = inputString.toLowerCase()	;
+          }
+      }
+  }
+</script>
+</html>

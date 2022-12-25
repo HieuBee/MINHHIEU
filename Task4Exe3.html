@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let input1 = prompt("Nhập xâu ký tự 1: ");
+  let input2 = prompt("Nhập xâu ký tự 2: ");
+  // let index = input1.indexOf(input2);
+  let dem = 0;
+  for (let i = 0; i < input1.length; i++) {
+    for (let j = 0; j < input2.length; j++) {
+      if (input1[i] === input2[j]) {
+        dem++;
+      }
+    }
+    break;
+  }
+  document.write(dem);
+</script>
+</html>

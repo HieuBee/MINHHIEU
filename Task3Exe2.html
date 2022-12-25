@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - 2</title>
+</head>
+<body>
+</body>
+<script>
+    let a = [31, 12, 17, 11, 21];
+    let b = [31, 12, 17, 2, 8, 11, 21];
+    let c = 0;
+    let k = 0;
+    let missingValue = [];
+    while (c < b.length - a.length){
+        if (a.indexOf(b[k]) === -1){
+            missingValue[c] = b[k];
+            c++;
+        }
+        k++;
+    }
+    document.write(missingValue.join());
+</script>
+</html>

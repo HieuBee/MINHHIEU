@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let number = +prompt("Nhập độ dài mảng cha: ");
+    let arr2D = [];
+    let sum = 0;
+    for (let i = 0; i < number ; i++) {
+        arr2D[i] = [];
+        document.write(arr2D[i] + "<br>");
+        let childLength = +prompt("Nhập độ dài mảng con");
+        for (let j = 0; j < childLength ; j++) {
+            arr2D[i][j] = +prompt("Nhập số: ");
+            document.write(arr2D[i][j]);
+            if (arr2D[i][j] % 2 === 0) {
+                sum += arr2D[i][j];
+            }
+
+        }
+    }
+    document.write("Tổng các số chẵn có trong ma trận: " + sum);
+
+</script>
+</html>
