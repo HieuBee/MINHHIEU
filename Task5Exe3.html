@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  let number = +prompt("Nhập độ dài mảng cha: ");
+  let arr2D = [];
+  let maxA = [0][0];
+  let minA = 0;
+  for (let i = 0; i < number ; i++) {
+    arr2D[i] = [];
+    document.write(arr2D[i] + "<br>");
+    let childLength = +prompt("Nhập độ dài mảng con");
+    for (let j = 0; j < childLength ; j++) {
+      arr2D[i][j] = +prompt("Nhập số: ");
+      document.write(arr2D[i][j] + "<br>");
+      if (maxA < arr2D[i][j]) {
+        maxA = arr2D[i][j];
+      } else {
+          maxA = arr2D[i][j];
+          minA = maxA;
+      }
+    }
+  }
+  document.write("Giá trị lớn nhất có trong ma trận: " + maxA + "<br>");
+  document.write("Giá trị nhỏ nhất có trong ma trận: " + minA);
+</script>
+</html>
