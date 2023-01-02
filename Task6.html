@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addStudent()">Thêm mới học viên</button>
+<button onclick="editStudent()">Sửa thông tin học viên</button>
+<button onclick="deleteStudent()">Xóa học viên</button>
+<span id="result"></span>
+</body>
+<script>
+  class Student {
+    constructor(idStudent, nameStudent, classStudent, emailStudent, dateStudent) {
+      this.idStudent = idStudent;
+      this.nameStudent = nameStudent;
+      this.classStudent = classStudent;
+      this.emailStudent = emailStudent;
+      this.dateStudent = dateStudent;
+    }
+    setId(newId) {
+      this.idStudent = newId;
+    }
+    setName(newName) {
+      this.nameStudent = newName;
+    }
+    setClass(newClass) {
+      this.classStudent = newClass;
+    }
+    setEmail(newEmail) {
+      this.emailStudent = newEmail;
+    }
+    setDate(newDate) {
+      this.dateStudent = newDate;
+    }
+  }
+
+  let students = [];
+
+  function display() {
+    let tableStudent =
+            '<table>' +
+            '<tr>' +
+            '<th>MHV</th> <th>Tên học viên</th> <th>Lớp</th> <th>Email</th> <th>Ngày sinh</th>' +
+            '</tr>';
+    for (let i = 0; i < students.length; i++) {
+      tableStudent +=
+              '<tr>' +
+              '<td>' + students[i].idStudent + '</td>' +
+              '<td>' + students[i].nameStudent + '</td>' +
+              '<td>' + students[i].classStudent + '</td>' +
+              '<td>' + students[i].emailStudent + '</td>' +
+              '<td>' + students[i].dateStudent + '</td>' +
+              '</tr>';
+    }
+    tableStudent += '</table>';
+    document.getElementById("result").innerHTML = tableStudent;
+  }
+
+  function isName(name) {
+      if (name.length > 50) {
+          alert("Tên bạn nhập vượt quá 50 ký tự!");
+          return true;
+      }
+  }
+
+  function isId(number) {
+      if (students.length > 0) {
+          for (let i = 0; i < students.length; i++) {
+              if (number === students[i].idStudent) {
+                  alert("MHV đã tồn tại!");
+                  return true;
+              } else {
+                  break;
+              }
+          }
+      }
+  }
+  function addStudent() {
+    let student = new Student();
+
+      let inputId;
+      do
+      {
+          inputId = +prompt ("Nhập MHV");
+          student.setId(inputId);
+      }
+      while (isId(student.idStudent));
+
+      let inputName;
+      do
+      {
+          inputName = prompt ("Nhập tên HV");
+          student.setName(inputName);
+      }
+      while (isName(inputName));
+
+    let inputClass = prompt("Nhập lớp HV: ");
+    student.setClass(inputClass);
+
+    let inputEmail = prompt("Nhập email HV: ");
+    student.setEmail(inputEmail);
+
+    let inputDate = prompt("Nhập ngày sinh HV: ");
+    student.setDate(inputDate);
+
+    students.push(student);
+    display();
+  }
+  
+  function editStudent() {
+    let chooseId = +prompt("Chọn id bạn muốn sửa: ");
+    for (let i = 0; i < students.length; i++) {
+      if (chooseId === students[i].idStudent) {
+        let newName = prompt("Nhập tên HV: ");
+        students[i].setName(newName);
+
+        let newClass = prompt("Nhập lớp HV: ");
+        students[i].setClass(newClass);
+
+        let newEmail = prompt("Nhập email HV: ");
+        students[i].setEmail(newEmail);
+
+        let newDate = prompt("Nhập ngày sinh HV: ");
+        students[i].setDate(newDate);
+      } else {
+        alert("Mã HV không tồn tại! ");
+      }
+    }
+    display();
+  }
+
+  function deleteStudent() {
+      let chooseId = +prompt("Chọn id HV bạn cần xóa: ");
+      for (let i = 0; i < students.length; i++) {
+          if (chooseId === students[i].idStudent) {
+              let text = "Bạn muốn xóa HV này?";
+              if (confirm(text) === true) {
+                  students.splice(i, 1);
+                  break;
+              } else {
+                  alert("Bạn hoàn tác thành công");
+              }
+          } else {
+              alert("Mã vừa nhập không phù hợp!");
+          }
+      }
+      display();
+  }
+</script>
+</html>
