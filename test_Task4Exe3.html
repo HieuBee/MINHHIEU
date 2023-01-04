@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <h2>Task 3 - Bài 4:</h2>
+  <table>
+    <tr>
+      <th style="width: 200px;">Loại nước uống</th>
+      <th style="width: 100px;">Đơn giá</th>
+      <th style="width: 100px;">Số lượng</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="drink" id="drink0" onclick="chooseDrink(this.id)"><label for="drink0">Cafe</label></td>
+      <td><span id="unitPrice0"></span></td>
+      <td><span id="quantity0"></span></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="drink" id="drink1" onclick="chooseDrink(this.id)"><label for="drink1">Cam vắt</label></td>
+      <td><span id="unitPrice1"></span></td>
+      <td><span id="quantity1"></span></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="drink" id="drink2" onclick="chooseDrink(this.id)"><label for="drink2">Nước ép cà rốt</label></td>
+      <td><span id="unitPrice2"></span></td>
+      <td><span id="quantity2"></span></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="drink" id="drink3" onclick="chooseDrink(this.id)"><label for="drink3">Nước ép cà chua</label></td>
+      <td><span id="unitPrice3"></span></td>
+      <td><span id="quantity3"></span></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="drink" id="drink4" onclick="chooseDrink(this.id)"><label for="drink4">Nước lọc</label></td>
+      <td><span id="unitPrice4"></span></td>
+      <td><span id="quantity4"></span></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="drink" id="drink5" onclick="chooseDrink(this.id)"><label for="drink5">Nước dừa</label></td>
+      <td><span id="unitPrice5"></span></td>
+      <td><span id="quantity5"></span></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="Exit" onclick="displayMoney()">Thành tiền</button></td>
+    </tr>
+  </table>
+  <span id="result_34"></span>
+</div>
+</body>
+<script>
+  let unitPrice = [15000, 20000, 25000, 22000, 10000, 30000];
+  let drinks = ['drink0', 'drink1', 'drink2', 'drink3', 'drink4', 'drink5']
+  let checkbox = document.getElementsByName("drink");
+  let value = 0;
+
+  function chooseDrink(ticked)
+  {
+    let index = drinks.indexOf(ticked);
+    if (checkbox[index].checked)
+    {
+      let q = +prompt ("Nhập số lượng");
+      document.getElementById("unitPrice" + index).innerText = unitPrice[index];
+      document.getElementById("quantity" + index).innerText = q;
+      value += q * unitPrice[index];
+    }
+    else
+    {
+      let uq = document.getElementById("quantity" + index).innerText;
+      value -= uq * unitPrice[index];
+      document.getElementById("unitPrice" + index).innerText = "";
+      document.getElementById("quantity" + index).innerText = "";
+    };
+  };
+  function displayMoney()
+  {
+    document.getElementById("result_34").innerText = "Tổng giá trị: " + value + "VND";
+  };
+
+</script>
+</html>
