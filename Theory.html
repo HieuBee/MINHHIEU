@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--CÁC PHƯƠNG THỨC CỦ ĐỐI TƯỢNG STRING:
+
+charAt()	Trả về ký tự tại chỉ mục (index) đã xác định.
+
+charCodeAt()	Trả về một số chỉ dẫn giá trị Unicode của ký tự tại chỉ mục đã cho
+
+concat()	so khớp văn bản của hai chuỗi và trả về một chuỗi mới.
+
+indexOf()	Trả về chỉ mục trong đối tượng String đang gọi của sự xảy ra đầu tiên của giá trị đã xác định, hoặc -1 nếu không tìm thấy.
+
+lastIndexOf()	Trả về chỉ mục trong đối tượng String đang gọi của sự xảy ra cuối cùng của giá trị đã xác định, hoặc -1 nếu không tìm thấy.
+
+localeCompare()	Trả về một số chỉ dẫn có hay không một chuỗi tham chiếu đến trước hoặc sau hoặc là giống với chuỗi đã cho trong thứ tự phân loại
+
+length()	Trả về độ dài của chuỗi
+
+match()	Được sử dụng để so khớp một Regular Expression với một chuỗi.
+
+replace()	Được sử dụng để tìm một so khớp giữa Regular Expression đã cho và một chuỗi, và để thay thế chuỗi phụ đã so khớp với một chuỗi phụ mới.
+
+search()	Thực thi việc tìm kiếm cho một match giữa một Regular Expression và một chuỗi đã xác định.
+
+slice()	Trích (extract) một khu vực của một chuỗi và trả về một chuỗi mới.
+
+split()	Chia một đối tượng String thành một mảng của các chuỗi bằng việc phân chia chuỗi thành các chuỗi phụ
+
+substr()	Trả về các ký tự trong một chuỗi bắt đầu tại vị trí đã xác định với một số ký tự đã xác định.
+
+substring()	Trả về các ký tự trong một chuỗi giữa hai chỉ mục (index) bên trong chuỗi đó.
+
+toLocaleLowerCase()	Các ký tự bên trong một chuỗi được biến đổi thành kiểu chữ thường đồng thời tôn trọng Locale hiện tại.
+
+toLocaleUpperCase()	Các ký tự bên trong một chuỗi được biến đổi thành kiểu chữ hoa đồng thời tôn trọng Locale hiện tại.
+
+toLowerCase()	Trả về giá trị chuỗi đang gọi được biến đổi thành kiểu chữ thường
+
+toString()	Trả về một chuỗi biểu diễn đối tượng đã xác định
+
+toUpperCase()	Trả về giá trị chuỗi đang gọi được biến đổi thành kiểu chữ hoa
+
+valueOf()	Trả về giá trị gốc của đối tượng đã xác định.-->
+
+<!-------------------------------------------------------------------------->
+
+<!--CÁC PHƯƠNG THỨC CỦ ĐỐI TƯỢNG ARRAY:
+
+concat()	Trả về một mảng mới bao gồm mảng này kết hợp với các mảng khác và/hoặc giá trị khác.
+
+every()	Trả về true nếu mỗi phần tử trong mảng này thỏa mãn hàm kiểm tra đã cho.
+
+filter()	Tạo một mảng mới với tất cả các phần tử của mảng này, mà hàm lọc đã cho trả về true.
+
+forEach()	Gọi một hàm cho mỗi phần tử trong mảng.
+
+indexOf()	Trả về chỉ mục đầu tiên (thấp nhất) của một phần tử trong mảng tương đương với giá trị đã cho, hoặc -1 nếu không được tìm thấy.
+
+join()	Kết hợp tất cả phần tử trong một mảng vào trong một chuỗi.
+
+lastIndexOf()	Trả về chỉ mục cuối cùng (lớn nhất) của một phần tử trong mảng tương đương với giá trị đã cho, hoặc -1 nếu không được tìm thấy.
+
+map()	Tạo một mảng mới với các kết quả của việc gọi một hàm đã cho trên mỗi phần tử của mảng này.
+
+pop()	Gỡ bỏ phần tử cuối cùng từ một mảng và trả về phần tử đó.
+
+push()	Thêm một hoặc nhiều phần tử tới phần cuối của một mảng và trả về độ dài mới của mảng.
+
+reduce()	Áp dụng một hàm đồng thời với hai giá trị của mảng (từ trái qua phải) khi để giảm nó tới một giá trị đơn.
+
+reduceRight()	Áp dụng một hàm đồng thời với hai giá trị của mảng (từ phải qua trái) khi để giảm nó tới một giá trị đơn.
+
+reverse()	Đảo ngược thứ tự của các phần tử của một mảng – Đầu tiên trở thành cuối cùng và cuối cùng trở thành đầu tiên.
+
+shift()	Gỡ bỏ phần tử đầu tiên từ một mảng và trả về phần tử đó.
+
+slice()	Extract – trích một khu vực của một mảng và trả về một mảng mới.
+
+some()	Trả về true nếu có ít nhất một phần tử trong mảng này thỏa mãn hàm kiểm tra đã cho.
+
+toSource()	Biểu diễn code nguồn của một đối tượng.
+
+sort()	Sắp xếp phân loại các phần tử của một mảng.
+
+splice()	Thêm và/hoặc gỡ bỏ các phần tử từ một mảng.
+
+toString()	Trả về một chuỗi biểu diễn mảng đó và các phần tử của nó.
+
+unshift()	Thêm một hoặc nhiều phần tử tới phần đầu của một mảng và trả về độ dài mới của mảng.-->
+</body>
+</html>
